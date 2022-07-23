@@ -1,0 +1,56 @@
+<section class="searchBox">
+    <input class="search-bar">
+    <button class="search"> Search</button>
+</section>
+
+<h1>Movies</h1>
+<section class="buttons">
+    <button (click)="goToNewMovie()" class="newMovie">Add new Movie</button>
+
+    <button class="sortTitle">Sort By Name</button>
+    <button class="sortDirectors">Sort By Directors</button>
+    <button class="sortYear">Sort By Year</button>
+    <button class="sortYearD">Sort By Year Descending</button>
+
+    <section class="byGenreBox">
+        <button class="sortGenre">Sort By genre</button>
+        <select class="type">
+    </select>
+    </section>
+
+    <section class="filterDirectorsAndGenreBox">
+        <button class="filterByDirectorsAndGenre">Filter by director and genre</button>
+        <section class="select">
+            <select class="directors"></select>
+
+            <select class="genres"></select>
+        </section>
+    </section>
+
+
+
+
+
+
+</section>
+<table>
+    <thead>
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Director</th>
+            <th scope="col">Genre</th>
+            <th scope="col">Year</th>
+        </tr>
+
+    </thead>
+    <tfoot>
+
+    </tfoot>
+
+    <tbody class="tableMovies">
+
+        <tr class="movie" *ngFor="let m of movies" [movie]="m"></tr>
+
+
+    </tbody>
+</table>

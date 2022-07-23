@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Table(name="movies")
 
 @NoArgsConstructor
-public class Movie {
+public class Movie implements Comparable{
 
     @GeneratedValue(
             strategy = GenerationType.AUTO
@@ -29,4 +29,13 @@ public class Movie {
         this.gen = gen;
         this.year = year;
     }
+
+    @Override
+    public int compareTo(Object o) {
+
+        Movie movie=(Movie) o;
+        return this.title.compareTo(movie.title);
+    }
+
+
 }

@@ -1,0 +1,23 @@
+<main class="main-new">
+
+    <form [formGroup]="movieForm">
+        <h1>New Moive</h1>
+
+        <label for="title">Title</label>
+        <input class="title" formControlName="title">
+
+        <label for="director">Director</label>
+        <input class="director" formControlName="director">
+
+        <label for="genre">Genre</label>
+        <input class="genre" formControlName="gen">
+
+        <label for="year">Year</label>
+        <input class="year" formControlName="year">
+
+        <button (click)="onClick($event)" class="new">Create new movie</button>
+        <button (click)="OnCancel($event)" class="cancel">Cancel</button>
+    </form>
+
+    <section class="errors"></section>
+</main>
