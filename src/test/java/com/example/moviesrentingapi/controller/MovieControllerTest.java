@@ -27,7 +27,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @TestPropertySource(
-        locations = "classpath:application-it.properties"
+        locations = "classpath:application-test.properties"
 )
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = MoviesRentingApiApplication.class)
