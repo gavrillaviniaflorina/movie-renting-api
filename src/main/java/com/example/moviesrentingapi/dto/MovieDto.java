@@ -16,6 +16,5 @@ public class MovieDto {
         this.director = director;
         this.gen = gen;
         this.year = year;
-
     }
 }
