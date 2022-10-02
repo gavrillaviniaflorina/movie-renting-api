@@ -32,15 +32,13 @@ public class MovieController {
     }
 
     @PostMapping("/add")
-
     public ResponseEntity<MovieDto> addMovie(@RequestBody MovieDto movie){
         this.movieService.addMovie(movie);
 
         return new ResponseEntity<>(movie,HttpStatus.OK);
     }
 
-
-    @PostMapping("/update/{id}")
+    @PutMapping("/update/{id}")
     public ResponseEntity<Movie> updateMovie(@RequestBody MovieDto updateMovie,@PathVariable Long id){
         this.movieService.updateMovie(updateMovie);
 

@@ -53,8 +53,9 @@ export class NewMovieComponent implements OnInit {
       this.movie.year=this.movieForm.value['year'];
 
 
-      this.movieService.addMovie(this.movie).subscribe(response=>{
-        console.log(response);
+      this.movieService.addMovie(this.movie).subscribe(response=>{       
+        this.success();
+        this.router.navigate(['/movies']);
       });
     }
     else{
@@ -81,6 +82,9 @@ export class NewMovieComponent implements OnInit {
 
     this.router.navigate(['/movies']);
   }
-  
 
+  public success(){
+    this.notificationService.onSuccess("The movie was created");
+  }
+  
 }

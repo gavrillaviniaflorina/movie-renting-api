@@ -59,8 +59,8 @@ export class UpdateMovieComponent implements OnInit {
     if(this.movieForm.valid==true){
       
       this.movieService.updateMovie(this.movieForm.value,+this.id).subscribe(response=>{
-
         this.success();
+        this.router.navigate(['/movies']);
       });
     }else{
       this.validare();
@@ -69,7 +69,7 @@ export class UpdateMovieComponent implements OnInit {
   }
 
   public success(){
-    this.notificationService.onSuccess("The book was updated");
+    this.notificationService.onSuccess("The movie was updated");
   }
 
   public OnCancel(event:Event){
@@ -94,7 +94,7 @@ export class UpdateMovieComponent implements OnInit {
 
  
   public successDelete(){
-    this.notificationService.onSuccess("The book was deleted");
+    this.notificationService.onSuccess("The movie was deleted");
   
   }
 
