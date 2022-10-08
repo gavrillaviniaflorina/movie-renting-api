@@ -33,6 +33,7 @@ export class UpdateMovieComponent implements OnInit {
 
       this.movieService.findMoiveById(+this.id).subscribe(response=>{
 
+        
           this.initForm(response);
         
       })
