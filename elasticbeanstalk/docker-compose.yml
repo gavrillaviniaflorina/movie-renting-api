@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   backend:
-    image: "laviniaflorinagavril/movie-renting:2.10.2022.13.58.28"
+    image: "laviniaflorinagavril/movie-renting:2.10.2022.14.9.16"
     ports:
       - "80:8080"
     restart: "always"
