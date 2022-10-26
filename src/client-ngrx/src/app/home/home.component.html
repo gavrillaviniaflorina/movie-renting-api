@@ -1,0 +1,19 @@
+<h1>Movies</h1>
+<p><a class="button" (click)="onClick()">Create New Movie</a></p>
+<table *ngIf="moviesLoaded">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th>Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        <app-movie class="movie" *ngFor="let movie of movies" [movie]="movie"></app-movie>
+    </tbody>
+</table>
+
+<div *ngIf="!moviesLoaded" class="spinner-border" role="status">
+    <span class="sr-only"></span>
+</div>
